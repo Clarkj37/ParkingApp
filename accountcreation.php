@@ -2,22 +2,34 @@
 <html>
 
 <head>
-    <title>Parking App</title>
+    <title>Account Creation</title>
 </head>
 <center>
 
     <body>
 
-        <h1>Parking App</h1>
+        <h1>Create Account</h1>
 
         <br>
         <!-- Email and Password text and input boxes tables -->
         <table>
             <tr>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
                 <td>Email</td>
             </tr>
             <tr>
                 <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="phone"></td>
             </tr>
             <tr>
                 <td>Password</td>
@@ -26,16 +38,12 @@
                 <td><input type="password" name="password"></td>
             </tr>
             <tr>
-                <td><a href="Password Forget Page">Forgot Password?</a> </td>
+                <td>Confirm Password</td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password"></td>
             </tr>
         </table>
-
-        <br>
-        <!-- Login Button -->
-        <form action="Map Page">
-            <input type="submit" value="Login" />
-        </form>
-
         <br>
         <br>
         <!-- Don't Have an account text -->
@@ -46,7 +54,7 @@
         </table>
         <br>
         <!-- Sign Up Button -->
-        <form action="accountcreation.php">
+        <form action="index.php">
             <input type="submit" value="Sign Up" />
         </form>
 
