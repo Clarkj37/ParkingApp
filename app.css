@@ -1,0 +1,38 @@
+body {
+    background-color: #FDFDFD;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+}
+
+div {
+    background-color: rgba(148, 14, 148, 0.863);
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-right: 680px;
+    margin-left: 680px;
+}
+
+.logintext {
+    color: white;
+}
+.forgotpassword {
+    text-align: right;
+    
+}
+a:link{
+    color: white;
+}
+.textinput {
+    width: 200px;
+    height: 20px;
+}
+.buttoninput {
+    width: 110px;
+    height: 30px;
+}
+.logintext {
+    font-size: 14pt;
+}
