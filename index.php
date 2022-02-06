@@ -40,7 +40,6 @@ require_once('config.php');
                         header("Location: http://parkingapp/mappage.php?");
                     } else {
                         echo " You Have Entered Incorrect Email or Password";
-                        
                     }
                 }
                 ?>
@@ -51,13 +50,13 @@ require_once('config.php');
                         <td class="logintext">Email</td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="email" class="textinput" required></td>
+                        <td><input type="text" name="email" class="textinput"></td>
                     </tr>
                     <tr class="logintext">
                         <td>Password</td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="password" class="textinput" required></td>
+                        <td><input type="password" name="password" class="textinput"></td>
                     </tr>
                     <tr>
                         <td class="forgotpassword"><a href="resetpassword.php">Forgot Password?</a> </td>
@@ -68,18 +67,20 @@ require_once('config.php');
                             <input type="submit" name="login" value="Login" class="buttoninput" />
                         </td>
                     </tr>
+                    <tr>
+                        <td class="logintext">Don't Have an Account?</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="buttoninput" onclick="location.href='http://parkingapp/accountcreation.php';" value="Sign Up" /></td>
+                    </tr>
                 </table>
                 <br>
                 <!-- Don't Have an account text -->
                 <table>
-                    <tr>
-                        <td class="logintext">Don't Have an Account?</a></td>
-                    </tr>
+
                 </table>
                 <!-- Sign Up Button -->
-                <form action="accountcreation.php">
-                    <input type="submit" value="Sign Up" class="buttoninput" />
-                </form>
+
             </div>
         </form>
 
