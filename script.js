@@ -1,7 +1,7 @@
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 47.245009704980454, lng: -122.437795569982 },
-        zoom: 16,
+        zoom: 17,
         mapId: '8da7054fc3046b02'
     });
 
@@ -18,7 +18,72 @@ function initMap() {
 
             "</div>" +
             "</div>"
-        ]
+        ],
+        [
+            "Diamond Parking Lot",
+            47.243823825373646,
+            -122.43879538158146,
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h4>Diamond Parking Lot</h4>' +
+            '<div>' +
+
+            "</div>" +
+            "</div>"
+        ],
+        [
+            "Washington State History Museum Parking Lot",
+            47.24403095983615, 
+            -122.43596082635172,
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h4>Washington State History Museum Parking Lot</h4>' +
+            '<div>' +
+
+            "</div>" +
+            "</div>"
+        ],
+        [
+            "Court 17 Garage",
+            47.24636054985241, 
+            -122.43981330806251,
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h4>Court 17 Garage</h4>' +
+            '<div>' +
+
+            "</div>" +
+            "</div>"
+        ],
+        [
+            "Pinkerton",
+            47.24659581323548, 
+            -122.43917691878448,
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h4>Pinkerton</h4>' +
+            '<div>' +
+
+            "</div>" +
+            "</div>"
+        ],
+        [
+            "Whitney Parking Lot",
+            47.24491739592806, 
+            -122.44083116220746,
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h4>Whitney Parking Lot</h4>' +
+            '<div>' +
+
+            "</div>" +
+            "</div>"
+        ],
     ];
 
     for (let i = 0; i < markers.length; i++) {
