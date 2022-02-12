@@ -10,7 +10,9 @@ require_once('config.php');
     <title>Parking App</title>
 </head>
 <center>
-
+<div>
+<a href="index.php">Login</a> 
+</div>
     <body>
         <br><br><br><br>
         <h1>Parking App</h1>

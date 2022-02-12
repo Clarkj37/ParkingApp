@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Parking App</title>
 </head>
+<div>
+<a href="index.php">Login</a> 
+</div>
 <center>
 
     <body>

@@ -9,7 +9,9 @@ require_once('config.php');
     <title>Account Creation</title>
     <link rel="stylesheet" type="text/css" href="app.css">
 </head>
-
+<div>
+<a href="index.php">Login</a> 
+</div>
 <center>
     <main>
         <h1>Create Account</h1>

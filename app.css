@@ -36,3 +36,8 @@ a:link{
 .logintext {
     font-size: 14pt;
 }
+
+#map {
+    height: 60vh;
+    
+}

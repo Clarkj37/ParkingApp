@@ -1,0 +1,22 @@
+html   {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    text-align:center;
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 10;
+    padding: 0;
+}
+
+#map {
+    height: 80vh;
+}
