@@ -10,79 +10,37 @@ function initMap() {
             "Republic Parking (Cragle Lot)",
             47.24354673546066,
             -122.43809363900421,
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<h4>Republic Parking (Cragle Lot)</h4>' +
-            '<div>' +
-
-            "</div>" +
-            "</div>"
+            '<h4>Republic Parking (Cragle Lot)</h4>'
         ],
         [
             "Diamond Parking Lot",
             47.243823825373646,
             -122.43879538158146,
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<h4>Diamond Parking Lot</h4>' +
-            '<div>' +
-
-            "</div>" +
-            "</div>"
+            '<h4>Diamond Parking Lot</h4>'
         ],
         [
             "Washington State History Museum Parking Lot",
-            47.24403095983615, 
+            47.24403095983615,
             -122.43596082635172,
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<h4>Washington State History Museum Parking Lot</h4>' +
-            '<div>' +
-
-            "</div>" +
-            "</div>"
+            '<h4>Washington State History Museum Parking Lot</h4>'
         ],
         [
             "Court 17 Garage",
-            47.24636054985241, 
+            47.24636054985241,
             -122.43981330806251,
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<h4>Court 17 Garage</h4>' +
-            '<div>' +
-
-            "</div>" +
-            "</div>"
+            '<h4>Court 17 Garage</h4>'
         ],
         [
             "Pinkerton",
-            47.24659581323548, 
+            47.24659581323548,
             -122.43917691878448,
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<h4>Pinkerton</h4>' +
-            '<div>' +
-
-            "</div>" +
-            "</div>"
+            '<h4>Pinkerton</h4>'
         ],
         [
             "Whitney Parking Lot",
-            47.24491739592806, 
+            47.24491739592806,
             -122.44083116220746,
-            '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
-            '<h4>Whitney Parking Lot</h4>' +
-            '<div>' +
-
-            "</div>" +
-            "</div>"
+            '<h4>Whitney Parking Lot</h4>'
         ],
     ];
 
@@ -96,11 +54,47 @@ function initMap() {
         });
 
         const infowindow = new google.maps.InfoWindow({
-            content:currentMarker[3],
+            content: currentMarker[3],
         });
 
         marker.addListener("click", () => {
             infowindow.open(map, marker)
         });
     }
+    
+    var userMarker;
+    function placeMarker(location) {
+        
+
+        if ( userMarker ) {
+            userMarker.setPosition(location)
+          } else {
+            userMarker = new google.maps.Marker({
+              position: location,
+              map: map,
+              animation: google.maps.Animation.DROP
+            });
+          }
+
+        userMarker.addListener("click", () => {
+            userInfoWindow.open(map, userMarker)
+        });
+
+        const userInfoWindow = new google.maps.InfoWindow({
+          //content:,
+            content: 
+            "    <div> \n" +
+            "        <table>\n" +
+            "            <tr>\n" +
+            "                <td><a>Open Parking Spots:</a></td>\n" +
+            "                <td><textarea  id='user_input' placeholder='Open Spots'></textarea></td></tr>\n" +
+            "            <tr><td></td><td><input type='button' name='Save' value='Save' onclick='saveData()'/></td></tr>\n" +
+            "        </table>\n" +
+            "    </div>",
+        });
+
+    }
+    google.maps.event.addListener(map, 'click', function (event) {
+        placeMarker(event.latLng);
+    });
 }
