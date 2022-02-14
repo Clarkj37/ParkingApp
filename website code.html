@@ -1,0 +1,26 @@
+<script>
+    function Savedata() {
+        var x = document.getElementById('user_input').value;
+        document.getElementById('spots').innerHTML = x;
+    };
+</script>
+
+<center>
+    <h4>Republic Parking (Cragle Lot)</h4>
+</center>
+<div>
+    <table>
+        <tr>
+            <td>Current Parking Spots: </td>
+            <td id='spots'></td>
+        </tr>
+        <tr>
+            <td>Open Parking Spots: </td>
+            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+        </tr>
+    </table>
+</div>

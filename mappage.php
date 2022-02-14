@@ -5,7 +5,7 @@ require_once('config.php');
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="map.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
     <title>Map Page</title>
 </head>
 <a href="index.php">Login</a>
