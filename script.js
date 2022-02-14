@@ -12,108 +12,199 @@ function initMap() {
             "Republic Parking (Cragle Lot)",
             47.24354673546066,
             -122.43809363900421,
-            "<div id='infoWindow'>\n" +
-            "<script>\n" +
-            "    function Savedata() {\n" +
-            "        var x = document.getElementById('user_input').value;\n" +
-            "document.getElementById('spots').innerHTML = x;\n" +
-            "};\n" +
-            "</script>\n" +
-            "<center>\n" +
-            "<h4>Republic Parking (Cragle Lot)</h4>\n" +
-            "</center>\n" +
-            "<div>\n" +
-            "<table>\n" +
-            "<tr>\n" +
-            "<td>Current Parking Spots: " + parkingSpots + "</td>\n" +
-            "<td id='spots'></td>\n" +
-            "</tr>\n" +
-            "<tr>\n" +
-            "<td>Open Parking Spots: </td>\n" +
-            "<td><textarea id=user_input placeholder='Open Spots'></textarea></td>\n" +
-            "</tr>\n" +
-            "<tr>\n" +
-            "<td></td>\n" +
-            "<td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>\n" +
-            "</tr>\n" +
-            "</table>\n" +
-            "</div>\n" +
-            "</div>\n"
+            `
+            <div id='infoWindow'>
+                <script>
+                    function Savedata() {
+                    var x = document.getElementById('user_input').value;
+                    document.getElementById('spots').innerHTML = x;
+                    };
+                </script>
+                <center>
+                    <h4>Republic Parking (Cragle Lot)</h4>
+                </center>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Current Parking Spots: </td>
+                            <td id='spots'></td>
+                        </tr>
+                        <tr>
+                            <td>Open Parking Spots: </td>
+                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>`
         ],
         [
             "Diamond Parking Lot",
             47.243823825373646,
             -122.43879538158146,
-            '<center><h4>Diamond Parking Lot</h4></center>' +
-            "    <div> \n" +
-            "        <table>\n" +
-            "                <td>Current Parking Spots: " + parkingSpots + "</td>\n" +
-            "            <tr>\n" +
-            "                <td>Open Parking Spots:</td>\n" +
-            "                <td><textarea  id='user_input' placeholder='Open Spots'></textarea></td></tr>\n" +
-            "            <tr><td></td><td><input type='button' name='Save' value='Save' onclick='saveData()'/></td></tr>\n" +
-            "        </table>\n" +
-            "    </div>"
+            `
+            <div id='infoWindow'>
+                <script>
+                    function Savedata() {
+                    var x = document.getElementById('user_input').value;
+                    document.getElementById('spots').innerHTML = x;
+                    };
+                </script>
+                <center>
+                    <h4>Diamond Parking Lot</h4>
+                </center>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Current Parking Spots: </td>
+                            <td id='spots'></td>
+                        </tr>
+                        <tr>
+                            <td>Open Parking Spots: </td>
+                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>`
         ],
         [
             "Washington State History Museum",
             47.24403095983615,
             -122.43596082635172,
-            '<center><h4>Washington State History Museum Parking Lot</h4></center>' +
-            "    <div> \n" +
-            "        <table>\n" +
-            "                <td>Current Parking Spots: " + parkingSpots + "</td>\n" +
-            "            <tr>\n" +
-            "                <td>Open Parking Spots:</td>\n" +
-            "                <td><textarea  id='user_input' placeholder='Open Spots'></textarea></td></tr>\n" +
-            "            <tr><td></td><td><input type='button' name='Save' value='Save' onclick='saveData()'/></td></tr>\n" +
-            "        </table>\n" +
-            "    </div>"
+            `
+            <div id='infoWindow'>
+                <script>
+                    function Savedata() {
+                    var x = document.getElementById('user_input').value;
+                    document.getElementById('spots').innerHTML = x;
+                    };
+                </script>
+                <center>
+                    <h4Washington State History Museum</h4>
+                </center>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Current Parking Spots: </td>
+                            <td id='spots'></td>
+                        </tr>
+                        <tr>
+                            <td>Open Parking Spots: </td>
+                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>`
         ],
         [
             "Court 17 Garage",
             47.24636054985241,
             -122.43981330806251,
-            '<center><h4>Court 17 Garage</h4></center>' +
-            "    <div> \n" +
-            "        <table>\n" +
-            "                <td>Current Parking Spots: " + parkingSpots + "</td>\n" +
-            "            <tr>\n" +
-            "                <td>Open Parking Spots:</td>\n" +
-            "                <td><textarea  id='user_input' placeholder='Open Spots'></textarea></td></tr>\n" +
-            "            <tr><td></td><td><input type='button' name='Save' value='Save' onclick='saveData()'/></td></tr>\n" +
-            "        </table>\n" +
-            "    </div>",
+            `
+            <div id='infoWindow'>
+                <script>
+                    function Savedata() {
+                    var x = document.getElementById('user_input').value;
+                    document.getElementById('spots').innerHTML = x;
+                    };
+                </script>
+                <center>
+                    <h4>Court 17 Garage</h4>
+                </center>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Current Parking Spots: </td>
+                            <td id='spots'></td>
+                        </tr>
+                        <tr>
+                            <td>Open Parking Spots: </td>
+                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>`
         ],
         [
             "Pinkerton",
             47.24659581323548,
             -122.43917691878448,
-            '<center><h4>Pinkerton</h4></center>' +
-            "    <div> \n" +
-            "        <table>\n" +
-            "                <td>Current Parking Spots: " + parkingSpots + "</td>\n" +
-            "            <tr>\n" +
-            "                <td>Open Parking Spots:</td>\n" +
-            "                <td><textarea  id='user_input' placeholder='Open Spots'></textarea></td></tr>\n" +
-            "            <tr><td></td><td><input type='button' name='Save' value='Save' onclick='saveData()'/></td></tr>\n" +
-            "        </table>\n" +
-            "    </div>"
+            `
+            <div id='infoWindow'>
+                <script>
+                    function Savedata() {
+                    var x = document.getElementById('user_input').value;
+                    document.getElementById('spots').innerHTML = x;
+                    };
+                </script>
+                <center>
+                    <h4>Pinkerton</h4>
+                </center>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Current Parking Spots: </td>
+                            <td id='spots'></td>
+                        </tr>
+                        <tr>
+                            <td>Open Parking Spots: </td>
+                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>`
         ],
         [
             "Whitney Parking Lot",
             47.24491739592806,
             -122.44083116220746,
-            '<center><h4>Whitney Parking Lot</h4></center>' +
-            "    <div> \n" +
-            "        <table>\n" +
-            "               <td>Current Parking Spots: " + parkingSpots + "</td>\n" +
-            "            <tr>\n" +
-            "                <td>Open Parking Spots:</td>\n" +
-            "                <td><textarea  id='user_input' placeholder='Open Spots'></textarea></td></tr>\n" +
-            "            <tr><td></td><td><input type='button' name='Save' value='Save' onclick='saveData()'/></td></tr>\n" +
-            "        </table>\n" +
-            "    </div>"
+            `
+            <div id='infoWindow'>
+                <script>
+                    function Savedata() {
+                    var x = document.getElementById('user_input').value;
+                    document.getElementById('spots').innerHTML = x;
+                    };
+                </script>
+                <center>
+                    <h4>Whitney Parking Lot</h4>
+                </center>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Current Parking Spots: </td>
+                            <td id='spots'></td>
+                        </tr>
+                        <tr>
+                            <td>Open Parking Spots: </td>
+                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>`
         ],
     ];
 
@@ -137,6 +228,10 @@ function initMap() {
 
         marker.addListener("click", () => {
             infowindow.open(map, marker)
+        });
+
+        map.addListener("click", () => {
+            infowindow.close(map, marker)
         });
 
         marker.addListener(infowindow, 'domready', function () {
