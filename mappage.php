@@ -39,7 +39,6 @@ map_ids=8da7054fc3046b02&callback=initMap">
 
         $query = mysqli_query($connection, $query);
     }
-    $sql = mysqli_query($connection, $query);
     ?>
     <form method="post">
         <div>
