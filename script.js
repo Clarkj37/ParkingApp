@@ -13,205 +13,422 @@ function initMap() {
             47.24354673546066,
             -122.43809363900421,
             `
-            <div id='infoWindow'>
-                <script>
-                    function Savedata() {
-                    var x = document.getElementById('user_input').value;
-                    document.getElementById('spots').innerHTML = x;
-                    };
-                </script>
-                <center>
-                    <h4>Republic Parking (Cragle Lot)</h4>
-                </center>
+            <div style="display: none;">
+            <?php
+    $database_host = "localhost";
+    $database_account = "root";
+    $database_password = "";
+    $database_name = "locations";
+
+    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+    if ($connection->connect_error) {
+        die("Failed to connect" . $connection->connect_error);
+    }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $location = $_POST["location"];
+        $spots = $_POST["spots"];
+        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+        $query = mysqli_query($connection, $query);
+
+        
+        
+    }
+    ?>
+            </div>
+            <center>
+            <form method="post">
                 <div>
                     <table>
                         <tr>
-                            <td>Current Parking Spots: </td>
-                            <td id='spots'></td>
+                            <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                         </tr>
                         <tr>
-                            <td>Open Parking Spots: </td>
-                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                            <td><input type="text" name="spots" class="textinput"></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>
+                        <tr>
+                            <select name="location">
+                                <option>Republic Parking (Cragle Lot)</option>
+                            </select>
+                        </tr>
+                        </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                            <td>
+                                <input name="submit" type="submit" value="Submit Number" class="buttoninput" />
+                            </td>
                         </tr>
                     </table>
                 </div>
-                </div>`
+            </form>
+            </center>
+    `
         ],
         [
             "Diamond Parking Lot",
             47.243823825373646,
             -122.43879538158146,
             `
-            <div id='infoWindow'>
-                <script>
-                    function Savedata() {
-                    var x = document.getElementById('user_input').value;
-                    document.getElementById('spots').innerHTML = x;
-                    };
-                </script>
-                <center>
-                    <h4>Diamond Parking Lot</h4>
-                </center>
+            <div style="display: none;">
+            <?php
+    $database_host = "localhost";
+    $database_account = "root";
+    $database_password = "";
+    $database_name = "locations";
+
+    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+    if ($connection->connect_error) {
+        die("Failed to connect" . $connection->connect_error);
+    }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $location = $_POST["location"];
+        $spots = $_POST["spots"];
+        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+        $query = mysqli_query($connection, $query);
+
+        
+        
+    }
+    ?>
+            </div>
+            <center>
+            <form method="post">
                 <div>
                     <table>
                         <tr>
-                            <td>Current Parking Spots: </td>
-                            <td id='spots'></td>
+                            <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                         </tr>
                         <tr>
-                            <td>Open Parking Spots: </td>
-                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                            <td><input type="text" name="spots" class="textinput"></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>
+                        <tr>
+                            <select name="location">
+                                <option>Diamond Parking Lot</option>
+                        </tr>
+                        </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                            <td>
+                                <input name="submit" type="submit" value="Submit Number" class="buttoninput" />
+                            </td>
                         </tr>
                     </table>
                 </div>
-                </div>`
+            </form>
+            </center>
+    `
         ],
         [
             "Washington State History Museum",
             47.24403095983615,
             -122.43596082635172,
             `
-            <div id='infoWindow'>
-                <script>
-                    function Savedata() {
-                    var x = document.getElementById('user_input').value;
-                    document.getElementById('spots').innerHTML = x;
-                    };
-                </script>
-                <center>
-                    <h4Washington State History Museum</h4>
-                </center>
+            <div style="display: none;">
+            <?php
+    $database_host = "localhost";
+    $database_account = "root";
+    $database_password = "";
+    $database_name = "locations";
+
+    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+    if ($connection->connect_error) {
+        die("Failed to connect" . $connection->connect_error);
+    }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $location = $_POST["location"];
+        $spots = $_POST["spots"];
+        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+        $query = mysqli_query($connection, $query);
+
+        
+        
+    }
+    ?>
+            </div>
+            <center>
+            <form method="post">
                 <div>
                     <table>
                         <tr>
-                            <td>Current Parking Spots: </td>
-                            <td id='spots'></td>
+                            <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                         </tr>
                         <tr>
-                            <td>Open Parking Spots: </td>
-                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                            <td><input type="text" name="spots" class="textinput"></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>
+                        <tr>
+                            <select name="location">
+                                <option>Washington State History Museum</option>
+                            </select>
+                        </tr>
+                        </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                            <td>
+                                <input name="submit" type="submit" value="Submit Number" class="buttoninput" />
+                            </td>
                         </tr>
                     </table>
                 </div>
-                </div>`
+            </form>
+            </center>
+    `
         ],
         [
             "Court 17 Garage",
             47.24636054985241,
             -122.43981330806251,
             `
-            <div id='infoWindow'>
-                <script>
-                    function Savedata() {
-                    var x = document.getElementById('user_input').value;
-                    document.getElementById('spots').innerHTML = x;
-                    };
-                </script>
-                <center>
-                    <h4>Court 17 Garage</h4>
-                </center>
+            <div style="display: none;">
+            <?php
+    $database_host = "localhost";
+    $database_account = "root";
+    $database_password = "";
+    $database_name = "locations";
+
+    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+    if ($connection->connect_error) {
+        die("Failed to connect" . $connection->connect_error);
+    }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $location = $_POST["location"];
+        $spots = $_POST["spots"];
+        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+        $query = mysqli_query($connection, $query);
+
+        
+        
+    }
+    ?>
+            </div>
+            <center>
+            <form method="post">
                 <div>
                     <table>
                         <tr>
-                            <td>Current Parking Spots: </td>
-                            <td id='spots'></td>
+                            <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                         </tr>
                         <tr>
-                            <td>Open Parking Spots: </td>
-                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                            <td><input type="text" name="spots" class="textinput"></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>
+                        <tr>
+                            <select name="location">
+                                <option>Court 17 Garage</option>
+                            </select>
+                        </tr>
+                        </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                            <td>
+                                <input name="submit" type="submit" value="Submit Number" class="buttoninput" />
+                            </td>
                         </tr>
                     </table>
                 </div>
-                </div>`
+            </form>
+            </center>
+    `
         ],
         [
             "Pinkerton",
             47.24659581323548,
             -122.43917691878448,
             `
-            <div id='infoWindow'>
-                <script>
-                    function Savedata() {
-                    var x = document.getElementById('user_input').value;
-                    document.getElementById('spots').innerHTML = x;
-                    };
-                </script>
-                <center>
-                    <h4>Pinkerton</h4>
-                </center>
+            <div style="display: none;">
+            <?php
+    $database_host = "localhost";
+    $database_account = "root";
+    $database_password = "";
+    $database_name = "locations";
+
+    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+    if ($connection->connect_error) {
+        die("Failed to connect" . $connection->connect_error);
+    }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $location = $_POST["location"];
+        $spots = $_POST["spots"];
+        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+        $query = mysqli_query($connection, $query);
+
+        
+        
+    }
+    ?>
+            </div>
+            <center>
+            <?php echo $row['spots'];?>
+            <form method="post">
                 <div>
                     <table>
                         <tr>
-                            <td>Current Parking Spots: </td>
-                            <td id='spots'></td>
+                            <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
+                            <p><?php echo $firstSpots; ?></p>
                         </tr>
                         <tr>
-                            <td>Open Parking Spots: </td>
-                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                            <td><input type="text" name="spots" class="textinput"></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>
+                        <tr>
+                            <select name="location">
+                                <option>Pinkerton</option>
+                            </select>
+                        </tr>
+                        </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                            <td>
+                                <input name="submit" type="submit" value="Submit Number" class="buttoninput" />
+                            </td>
                         </tr>
                     </table>
                 </div>
-                </div>`
+            </form>
+            </center>
+    `
         ],
         [
             "Whitney Parking Lot",
             47.24491739592806,
             -122.44083116220746,
             `
-            <div id='infoWindow'>
-                <script>
-                    function Savedata() {
-                    var x = document.getElementById('user_input').value;
-                    document.getElementById('spots').innerHTML = x;
-                    };
-                </script>
-                <center>
-                    <h4>Whitney Parking Lot</h4>
-                </center>
+            <div style="display: none;">
+            <?php
+    $database_host = "localhost";
+    $database_account = "root";
+    $database_password = "";
+    $database_name = "locations";
+
+    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+    if ($connection->connect_error) {
+        die("Failed to connect" . $connection->connect_error);
+    }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $location = $_POST["location"];
+        $spots = $_POST["spots"];
+        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+        $query = mysqli_query($connection, $query);
+
+        
+        
+    }
+    ?>
+            </div>
+            <center>
+            <form method="post">
                 <div>
                     <table>
                         <tr>
-                            <td>Current Parking Spots: </td>
-                            <td id='spots'></td>
+                            <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                         </tr>
                         <tr>
-                            <td>Open Parking Spots: </td>
-                            <td><textarea id=user_input placeholder='Open Spots'></textarea></td>
+                            <td><input type="text" name="spots" class="textinput"></td>
+                        </tr>
+                            <br>
+                        <tr>
+                            <td>
+                        <tr>
+                            <select name="location">
+                                <option>Whitney Parking Lot</option>
+                            </select>
+                        </tr>
+                            </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type='button' name='Save' value='Save' onclick='Savedata()' /></td>
+                            <td>
+                                <input name="submit" type="submit" value="Submit Number" class="buttoninput" />
+                            </td>
                         </tr>
                     </table>
                 </div>
-                </div>`
+            </form>
+            </center>
+    `
         ],
     ];
 
     for (let i = 0; i < markers.length; i++) {
         const currentMarker = markers[i];
-        const marker = new google.maps.Marker({
-            position: { lat: currentMarker[1], lng: currentMarker[2] },
+        const marker = new google.maps.Marker({ position: { 
+            lat: currentMarker[1], lng: currentMarker[2] },
             map,
             title: currentMarker[0],
             label: {
@@ -224,6 +441,7 @@ function initMap() {
 
         const infowindow = new google.maps.InfoWindow({
             content: currentMarker[3],
+            //content: `<?php echo "test";?>`
         });
 
         marker.addListener("click", () => {

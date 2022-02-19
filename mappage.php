@@ -21,6 +21,7 @@ require_once('config.php');
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyhCrohq-f-kdEo69X7FGhnf7nSoP3UGY&
 map_ids=8da7054fc3046b02&callback=initMap">
     </script>
+    
 
     <?php
     $database_host = "localhost";
@@ -32,14 +33,27 @@ map_ids=8da7054fc3046b02&callback=initMap">
     if ($connection->connect_error) {
         die("Failed to connect" . $connection->connect_error);
     }
+
+    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $check = mysqli_query($connection,$origSpots);
+    $resultCheck = mysqli_num_rows($check);
+    if ($resultCheck > 0) {
+        while($row = mysqli_fetch_assoc($check)){
+            echo $row['spots'];
+        }
+    }
+
     if (isset($_POST['submit'])) {
         $location = $_POST["location"];
         $spots = $_POST["spots"];
         $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
-
+        
         $query = mysqli_query($connection, $query);
+
+        
+        
     }
-    ?>
+    ?><!--
     <form method="post">
         <div>
             <table>
@@ -71,7 +85,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                 </tr>
             </table>
         </div>
-    </form>
+    </form>-->
 </body>
 
 </html>
