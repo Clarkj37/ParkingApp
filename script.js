@@ -25,7 +25,7 @@ function initMap() {
         die("Failed to connect" . $connection->connect_error);
     }
 
-    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $origSpots = "SELECT * FROM locations where name = 'Republic Parking (Cragle Lot)';"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
@@ -49,9 +49,11 @@ function initMap() {
             <center>
             <form method="post">
                 <div>
+                <h3>Republic Parking (Cragle Lot)</h3>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
+                            <p><?php echo $firstSpots; ?></p>
                         </tr>
                         <tr>
                             <td><input type="text" name="spots" class="textinput"></td>
@@ -60,7 +62,7 @@ function initMap() {
                         <tr>
                             <td>
                         <tr>
-                            <select name="location">
+                            <select name="location" style="display: none;">
                                 <option>Republic Parking (Cragle Lot)</option>
                             </select>
                         </tr>
@@ -94,7 +96,7 @@ function initMap() {
         die("Failed to connect" . $connection->connect_error);
     }
 
-    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $origSpots = "SELECT * FROM locations where name = 'Diamond Parking Lot';"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
@@ -118,9 +120,11 @@ function initMap() {
             <center>
             <form method="post">
                 <div>
+                <h3>Daimond Parking Lot</h3>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
+                            <p><?php echo $firstSpots; ?></p>
                         </tr>
                         <tr>
                             <td><input type="text" name="spots" class="textinput"></td>
@@ -129,8 +133,9 @@ function initMap() {
                         <tr>
                             <td>
                         <tr>
-                            <select name="location">
+                            <select name="location" style="display: none;">
                                 <option>Diamond Parking Lot</option>
+                            </select>
                         </tr>
                         </td>
                         </tr>
@@ -162,7 +167,7 @@ function initMap() {
         die("Failed to connect" . $connection->connect_error);
     }
 
-    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $origSpots = "SELECT * FROM locations where name = 'Washington State History Museum';"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
@@ -186,9 +191,11 @@ function initMap() {
             <center>
             <form method="post">
                 <div>
+                <h3>Washington State History Museum</h3>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
+                            <p><?php echo $firstSpots; ?></p>
                         </tr>
                         <tr>
                             <td><input type="text" name="spots" class="textinput"></td>
@@ -197,7 +204,7 @@ function initMap() {
                         <tr>
                             <td>
                         <tr>
-                            <select name="location">
+                            <select name="location" style="display: none;">
                                 <option>Washington State History Museum</option>
                             </select>
                         </tr>
@@ -231,7 +238,7 @@ function initMap() {
         die("Failed to connect" . $connection->connect_error);
     }
 
-    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $origSpots = "SELECT * FROM locations where name = 'Court 17 Garage';"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
@@ -255,9 +262,11 @@ function initMap() {
             <center>
             <form method="post">
                 <div>
+                <h3>Court 17 Garage</h3>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
+                            <p><?php echo $firstSpots; ?></p>
                         </tr>
                         <tr>
                             <td><input type="text" name="spots" class="textinput"></td>
@@ -266,7 +275,7 @@ function initMap() {
                         <tr>
                             <td>
                         <tr>
-                            <select name="location">
+                            <select name="location" style="display: none;">
                                 <option>Court 17 Garage</option>
                             </select>
                         </tr>
@@ -290,16 +299,37 @@ function initMap() {
             `
             <div style="display: none;">
             <?php
-    $database_host = "localhost";
-    $database_account = "root";
-    $database_password = "";
-    $database_name = "locations";
+            $database_host = "localhost";
+            $database_account = "root";
+            $database_password = "";
+            $database_name = "locations";
 
-    $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
-    if ($connection->connect_error) {
-        die("Failed to connect" . $connection->connect_error);
-    }
+            $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+            if ($connection->connect_error) {
+                die("Failed to connect" . $connection->connect_error);
+            }
 
+            if (isset($_POST['submit'])) {
+                $location = $_POST["location"];
+                $spots = $_POST["spots"];
+                $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
+        
+                $query = mysqli_query($connection, $query);
+        
+            }
+            ?>
+            </div>
+    <div style="display: none;">
+    <?php
+    database_host = "localhost";
+            $database_account = "root";
+            $database_password = "";
+            $database_name = "locations";
+
+            $connection = mysqli_connect($database_host, $database_account, $database_password, $database_name);
+            if ($connection->connect_error) {
+                die("Failed to connect" . $connection->connect_error);
+            }
     $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
@@ -308,23 +338,12 @@ function initMap() {
             echo $row['spots'];
         }
     }
-
-    if (isset($_POST['submit'])) {
-        $location = $_POST["location"];
-        $spots = $_POST["spots"];
-        $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
-        
-        $query = mysqli_query($connection, $query);
-
-        
-        
-    }
     ?>
-            </div>
-            <center>
-            <?php echo $row['spots'];?>
+    </div>
+        <center>
             <form method="post">
                 <div>
+                <h3>Pinkerton</h3>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
@@ -337,7 +356,7 @@ function initMap() {
                         <tr>
                             <td>
                         <tr>
-                            <select name="location">
+                            <select name="location" style="display: none;">
                                 <option>Pinkerton</option>
                             </select>
                         </tr>
@@ -351,8 +370,8 @@ function initMap() {
                     </table>
                 </div>
             </form>
-            </center>
-    `
+        </center>
+        `
         ],
         [
             "Whitney Parking Lot",
@@ -371,7 +390,7 @@ function initMap() {
         die("Failed to connect" . $connection->connect_error);
     }
 
-    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $origSpots = "SELECT * FROM locations where name = 'Whitney Parking Lot';"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
@@ -395,18 +414,20 @@ function initMap() {
             <center>
             <form method="post">
                 <div>
+                <h3>Whitney Parking Lot</h3>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
+                            <p><?php echo $firstSpots; ?></p>
                         </tr>
                         <tr>
                             <td><input type="text" name="spots" class="textinput"></td>
                         </tr>
-                            <br>
+                        <br>
                         <tr>
                             <td>
                         <tr>
-                            <select name="location">
+                            <select name="location" style="display: none;">
                                 <option>Whitney Parking Lot</option>
                             </select>
                         </tr>

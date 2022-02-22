@@ -34,12 +34,13 @@ map_ids=8da7054fc3046b02&callback=initMap">
         die("Failed to connect" . $connection->connect_error);
     }
 
-    $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
+    $origSpots = "SELECT * FROM locations;"; 
     $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
         while($row = mysqli_fetch_assoc($check)){
-            echo $row['spots'];
+            echo "<tr><td>".$row['name']."</td><td>".": ".$row['spots']."</td></tr>";
+            echo "<br>";
         }
     }
 
@@ -49,11 +50,10 @@ map_ids=8da7054fc3046b02&callback=initMap">
         $query = "UPDATE locations SET spots='$spots' WHERE name='$location'";
         
         $query = mysqli_query($connection, $query);
-
-        
-        
     }
-    ?><!--
+    ?>
+
+    <!--
     <form method="post">
         <div>
             <table>
