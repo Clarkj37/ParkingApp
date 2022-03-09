@@ -434,7 +434,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                             <p>Open Parking Spots: <?php $origSpots = "SELECT * FROM locations where name = 'Whitney Parking Lot';"; 
-                                        $check = mysqli_query($connection,$origSpots);
+            $check = mysqli_query($connection,$origSpots);
     $resultCheck = mysqli_num_rows($check);
     if ($resultCheck > 0) {
         while($row = mysqli_fetch_assoc($check)){
