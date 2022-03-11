@@ -65,6 +65,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
             <form method="post">
                 <div>
                 <h3>Republic Parking (Cragle Lot)</h3>
+                <tr>Construction</tr>
                     <table>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
@@ -137,6 +138,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                 <div>
                 <h3>Daimond Parking Lot</h3>
                     <table>
+                    <tr>$1.50 Per Hour / All Day = $9.00</tr>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                             <p>Open Parking Spots: <?php $origSpots = "SELECT * FROM locations where name = 'Diamond Parking Lot';"; 
@@ -208,6 +210,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                 <div>
                 <h3>Washington State History Museum</h3>
                     <table>
+                    <tr>$4 First 2 Hours / Added $3 for every 2 Hours Longer</tr>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                             <p>Open Parking Spots: <?php $origSpots = "SELECT * FROM locations where name = 'Washington State History Museum';"; 
@@ -279,6 +282,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                 <div>
                 <h3>Court 17 Garage</h3>
                     <table>
+                    <tr>$1.50 Per Hour / All Day = $9.00</tr>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                             <p>Open Parking Spots: <?php $origSpots = "SELECT * FROM locations where name = 'Court 17 Garage';"; 
@@ -360,6 +364,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                 <div>
                 <h3>Pinkerton</h3>
                     <table>
+                    <tr>$1.50 Per Hour / 3-hour limit</tr>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                             <p>Open Parking Spots: <?php $origSpots = "SELECT * FROM locations where name = 'Pinkerton';"; 
@@ -431,6 +436,7 @@ map_ids=8da7054fc3046b02&callback=initMap">
                 <div>
                 <h3>Whitney Parking Lot</h3>
                     <table>
+                    <tr>$144 Per Quarter</tr>
                         <tr>
                             <td class="logintext"><label for="name">Enter Parking Spaces </label></td>
                             <p>Open Parking Spots: <?php $origSpots = "SELECT * FROM locations where name = 'Whitney Parking Lot';"; 
